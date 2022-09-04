@@ -1,5 +1,31 @@
-// check if a factor is a factor of a base
+// Check if a number is a factor of a base
 
 function checkForFactor (base, factor) {
   return base % factor === 0
+}
+
+// Given a non-empty array of integers, return the result of multiplying the values together in order.
+
+const grow = arr => arr.reduce((t, c) => t * c, 1)
+
+// Complete the solution so that it reverses all of the words within the string passed in. 
+
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ')
+}
+
+// In this Kata you are expected to find the coefficients of quadratic equation of the given two roots (x1 and x2).
+// Equation will be the form of ax^2 + bx + c = 0
+// Return type is a Vector (tuple in Rust, Array in Ruby) containing coefficients of the equations in the order (a, b, c).
+// Since there are infinitely many solutions to this problem, we fix a = 1.
+// Remember, the roots can be written like (x-x1) * (x-x2) = 0
+
+function quadratic(x1, x2){
+  return [1, (-x1 + -x2), x1 * x2]
+}
+
+/* Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+*/
+function remove (string) {
+  return string.charAt(string.length-1) == '!' ? string.substring(0, -1) : string // no regex allowed
 }
