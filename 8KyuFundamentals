@@ -39,3 +39,57 @@ function powersOfTwo(n){
   }
   return result
 }
+
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+function removeExclamationMarks(s) {
+  return s.replace(/!/g, '')
+}
+
+// given an integer or a floating-point number, find its opposite
+
+function opposite(number) {
+  return(-number);
+}
+
+// Add the value "codewars" to the websites array.
+
+// websites.push('codewars')
+
+
+// There is an object/class already created called MrFreeze. Mark this object as frozen so that no other changes can be made to it.
+
+// Object.freeze(MrFreeze)
+
+// Create a function with two arguments that will return an array of the first n multiples of x.
+
+function countBy(x, n) {
+  let z = []
+  for (let i = 1; i <= n; i++) {
+    z.push(x * i)
+  }
+  return z
+}
+
+// Make a simple function called greet that returns the most-famous "hello world!".
+
+const greet = () => "hello world!";
+
+/* Nathan loves cycling. Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling. You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value. */
+
+const litres = time => Math.floor(time / 2);
+
+/* After a hard quarter in the office you decide to get some rest on a vacation. So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+
+You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers.
+
+Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+Write a code that gives out the total amount for different days(d).
+*/
+
+function rentalCarCost(d) {
+  let total = 40 * d
+  let discount = (d >= 7)? 50 : (d >= 3)? 20 : 0
+  return total - discount
+}
