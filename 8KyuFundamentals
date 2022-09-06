@@ -93,3 +93,45 @@ function rentalCarCost(d) {
   let discount = (d >= 7)? 50 : (d >= 3)? 20 : 0
   return total - discount
 }
+
+/*You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
+
+Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
+
+Same goes for all the other arrays/lists that you will get in the tests: you have to change the element positions with the same exact logics
+
+Simples!*/
+
+function fixTheMeerkat(arr) {
+  return arr.reverse()
+ }
+
+//  Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+function sumMix(x){
+  return x.reduce((acc, item) => acc + +item, 0)
+}
+
+// Given an array of integers, return a new array with each value doubled.
+
+function maps(x){
+  return x.map(item => item * 2)
+}
+
+/* Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9. */
+
+function squareSum(numbers){
+  return numbers.reduce((acc, item) => acc + item ** 2, 0)
+}
+
+/* For every good kata idea there seem to be quite a few bad ones!
+
+In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. If there are no good ideas, as is often the case, return 'Fail!'.
+*/
+
+function well(x){
+  let count = x.filter(item => item === 'good').length
+  return (count > 2)? 'I smell a series!' : (count == 0)? 'Fail!' : 'Publish!'
+}
