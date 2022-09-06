@@ -1,0 +1,70 @@
+/* Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+Note: The function accepts an integer and returns an integer
+*/
+
+function squareDigits(num){
+  return Number(String(num).split('').map(item => (+item) **2).join(''))
+}
+
+/* Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+[10, 343445353, 3453445, 3453545353453] should return 3453455.
+*/
+
+function sumTwoSmallestNumbers(numbers) {  
+  numbers.sort((a, b) => a - b)
+  return +numbers.slice(1,2) + +numbers.slice(0,1)
+}
+
+// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+function filter_list(l) {
+  return l.filter( item => typeof item === 'number' )
+}
+
+// Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them. - Capitalized, that is
+
+String.prototype.toJadenCase = function() {
+  return this.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ')
+}
+
+// Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
+
+const isTriangle = (a, b, c) => (a + b > c) && (a + c > b) && (c + b > a) ? true : false
+
+/* Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+*/
+
+function getCount(str) {
+  return str.split('').reduce(function(c, item){
+    if (['a', 'e', 'i', 'o', 'u'].includes(item) ){
+      c++
+    }
+    return c
+  }, 0)
+}
+
+/* Given a list of integers, determine whether the sum of its elements is odd or even.
+
+Give your answer as a string matching "odd" or "even".
+
+If the input array is empty consider it as: [0] (array with a zero).
+*/
+
+const oddOrEven = array => (array.reduce((total, item) => total + item, 0) % 2 === 0) ? 'even' : 'odd';
+
+/* You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+*/
+
+function getMiddle(s) {
+  return s.slice(Math.floor((s.length-1)/2), Math.ceil((s.length+1)/2))
+}
