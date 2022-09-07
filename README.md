@@ -1,1 +1,1 @@
-A repository for storing codewars challenges
+A repository for storing solved codewars challenges
