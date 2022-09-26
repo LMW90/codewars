@@ -3,6 +3,6 @@ function nbYear(p0, percent, aug, p, years=0) {
       return years;
     }
     years++;
-    // console.log(years)
-    return nbYear(p0 * (1 + 0.01 * percent) + aug, percent, aug, p, years);
-}
+    p0 = Math.floor(p0 * (1 + percent / 100) + aug);
+    return nbYear(p0, percent, aug, p, years);
+  }
