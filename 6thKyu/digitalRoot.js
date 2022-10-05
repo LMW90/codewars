@@ -9,6 +9,6 @@ function digitalRoot(n) {
 }
 //math says hello
 // function digital_root(n) {
-//   return (n - 1) % 9 + 1;
+//   return (n - 1) % 9 + 1; // -1 + 1 handles input 9
 // }
 
