@@ -16,3 +16,5 @@ function sumOfDifferences(arr) {
     return total
   },0) || 0
 }
+
+// function sumOfDifferences(arr) {return Math.max(...arr) - Math.min(...arr)}
