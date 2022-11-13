@@ -8,7 +8,7 @@ Examples:
 function solution(str){
   // handle zero and one character strings
   if (!str) return []
-  if (str.length === 1) return '_' + str
+  if (str.length === 1) return str + '_'
   // create array of pairs of characters
   let result = str.match(/.{2}/g)
   // of string length is odd, add last character with a dash
