@@ -10,3 +10,4 @@ countSquares(4) --> 98
 */
 var countSquares = function(cuts){
   return cuts ? 2 + 6 * cuts ** 2 : 1//(cuts+1) **3 - (cuts-1)**3
+}
