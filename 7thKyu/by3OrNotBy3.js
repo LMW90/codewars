@@ -11,5 +11,5 @@ Example:
 "7"        -> false
 */
 function divisibleByThree(str){
-  return !(str.split('').reduce((sum,digit)=> sum += digit, 0) % 3);
+  return !(str.split('').reduce((sum,digit)=> sum += +digit, 0) % 3);
 }
