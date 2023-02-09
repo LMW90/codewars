@@ -28,7 +28,7 @@ function pascalsTriangle(n) {
     // build row if not first one
     if (i > 0){
       for (let j = 1; j < i + 1; j++){
-       row.push(factorial(i)/(factorial(j) * factorial(i-j)));
+       row.push(factorial(i)/factorial(j) / factorial(i-j));
       } 
     }
     // add row to triangle
@@ -40,4 +40,23 @@ function pascalsTriangle(n) {
 function factorial(n){
   if (n == 0) return 1;
   return n * factorial(n-1);
+}
+// non-recurrent version
+function pascalsTriangle(n) {
+  // initialize array for result
+  let triangle = [];
+  for (let i = 0; i < n; i++){
+    // initialize row
+    let row = [1];
+    // build row if not first or second one
+    if (i > 0){
+      for (let j = 1; j < i; j++){
+        row.push(triangle[i-1][j-1] + triangle[i-1][j]);
+      }
+      row.push(1);
+    }
+    // add row to triangle
+    triangle.push(row);
+  }
+  return triangle.flat();
 }
