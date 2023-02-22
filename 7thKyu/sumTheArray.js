@@ -10,5 +10,5 @@ arr.sum(); //returns 85
 */
 // just use reduce
 Array.prototype.sum = function(){
-  return (this.length) ? this.reduce((a,c)=>a+c) : 0;
+  return this.reduce((a,c)=>a+c, 0);
 }
