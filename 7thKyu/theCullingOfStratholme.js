@@ -19,3 +19,10 @@ NOTES:
 
 Good luck and for the Alliance!
 */
+function purifyTheStratholme(s) {
+    // replace all "I" or 'i' and adcajcent letters (if present) with an empty string
+    s = s.replace(/\S?[iI]+\S?/g, '')
+    // replace all whitespace bigger than 1 char with a space and clear ends
+      .replace(/\s{2}/g, ' ').replace(/^\s+|\s+$/g, '');
+    return s;
+  }
