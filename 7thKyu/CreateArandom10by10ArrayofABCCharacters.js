@@ -4,6 +4,5 @@ function array10(){
   // characters to pull from
   let chars = ['A','B','C']
   // create a ten item sparse array and fill it with ten random chars arrays
-	return Array(10)
-    .fill(Array.from({length: 10}, (_k,_v) => chars[Math.floor(Math.random()*(3))]));
+	return Array.from()
 }
