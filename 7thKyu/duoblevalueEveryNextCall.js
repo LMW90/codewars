@@ -5,7 +5,7 @@ On the first call it must be 1, on the second and others - it must be a double f
 Look tests for more examples, good luck :)
 */
 class Class {
-  static lastNumber = -2;
+  static lastNumber = -1;
   static getNumber() {
     this.lastNumber++;
     return 2**lastNumber;
