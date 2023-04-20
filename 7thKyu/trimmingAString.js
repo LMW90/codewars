@@ -16,8 +16,8 @@ Requested maximum length will be greater than 0. Input string will not be empty.
 */
 function trim(str, size) {
   // handle fringe cases
-  if (str.length <= 3) return str.slice(0,size) + '...';
   if (str.length <= size) return str;
+  if (str.length <= 3 || size <= 3) return str.slice(0,size)+"...";
   // return regular slice
   return str.slice(0,size-3)+"...";
 }
