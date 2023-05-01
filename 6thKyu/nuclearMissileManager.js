@@ -15,7 +15,7 @@ function launchAll(launchMissile) {
     timedLaunch(i);
   }
 }
-// other way is using anonymous returning launchMissile
+// other way is just using let to make a block level scope
 function launchAll(launchMissile) {
   for (let i = 0; i < 5; i++) {
     setTimeout(() => launchMissile(i), i * 1000);
