@@ -9,7 +9,7 @@ Should return: 160 (the only even number)
 */
 function findOutlier(integers){
   // determine if looking for even or odd number
-  let areEven = Boolean(integers.filter(integer => integer % 2).length === 1);
+  let areEven = integers.filter(integer => integer % 2).length === 1;
   // return even or odd number from the array
   return areEven 
     ? integers.find(integer => integer % 2 !== 0)
