@@ -16,11 +16,11 @@ Notes
     Switch the boolean value on the same element as the flick itself.
 */
 function flickSwitch(arr) {
-    let bool = true;
-    let result = [];
-    for (let item of arr) {
-      if (item == "flick") bool = !bool;
-      result.push(bool);
-    }
-    return result;
+  let bool = true;
+  let result = [];
+  for (let item of arr) {
+    if (item == "flick") bool = !bool;
+    result.push(bool);
   }
+  return result;
+}
